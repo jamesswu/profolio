@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -322,6 +323,7 @@ header .header-content h2 {
   font-size: 4.8rem;
 }
 header .header-content p {
+  margin-top: 25px;
   color: #aaa;
   font-size: 2.4rem;
   max-width: 500px;
@@ -331,20 +333,41 @@ main {
   margin-top: 100vh;
 }
 
+.about p {
+  font-size: 1.8rem;
+  color: #aaa;
+}
+
 .projects .projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .projects .projects-container .project {
+  margin: 10px 10px;
   position: relative;
-  width: 50%;
+  width: 45%;
 }
 .projects .projects-container .project img {
-  border-radius: 1%;
+  border-radius: 5px;
   width: 100%;
+}
+.projects .projects-container .project .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projects .projects-container .project .image-container p {
+  color: #aaa;
 }
 .projects .projects-container .project .links {
   position: absolute;
@@ -362,6 +385,47 @@ main {
   font-size: 1.8rem;
   text-decoration: none;
   color: #aaa;
+}
+
+.contact p {
+  font-size: 1.8rem;
+  color: #aaa;
+}
+.contact i {
+  font-size: 1.8rem;
+  color: #eaeaea;
+}
+.contact ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact ul li {
+  margin: 0 10px;
+}
+.contact .form-container form {
+  max-width: 500px;
+}
+.contact .form-container form label {
+  visibility: hidden;
+  display: block;
+  padding: 2px 0;
+}
+.contact .form-container form input, .contact .form-container form textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  resize: none;
+}
+.contact .form-container form button {
+  margin: 10px 0;
+  font-size: 2.4rem;
+  color: #eaeaea;
+  background: #fcba03;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 footer {
