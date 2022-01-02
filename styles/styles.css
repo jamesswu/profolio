@@ -333,11 +333,24 @@ main {
   margin-top: 100vh;
 }
 
+.about {
+  margin: 50px 0;
+}
+.about h3 {
+  margin: 25px 0;
+}
 .about p {
   font-size: 1.8rem;
   color: #aaa;
+  width: 50%;
 }
 
+.projects {
+  margin: 50px 0;
+}
+.projects h3 {
+  margin: 25px 0;
+}
 .projects .projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,17 +375,26 @@ main {
   width: 100%;
 }
 .projects .projects-container .project .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .projects .projects-container .project .image-container p {
   color: #aaa;
 }
-.projects .projects-container .project .links {
+.projects .projects-container .project .project-info-container {
   position: absolute;
-  bottom: 85%;
-  left: 90%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,15 +403,48 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.projects .projects-container .project .links a {
+.projects .projects-container .project .project-info-container h4 {
+  font-size: 3.2rem;
+  color: #eaeaea;
+}
+.projects .projects-container .project .project-info-container p {
   font-size: 1.8rem;
-  text-decoration: none;
   color: #aaa;
 }
+.projects .projects-container .project .project-info-container .links {
+  margin-top: 10px;
+}
+.projects .projects-container .project .project-info-container a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #eaeaea;
+  background: #fcba03;
+  border-radius: 5px;
+  padding: 4px;
+}
+.projects .projects-container .project:hover .image-container {
+  opacity: 0.3;
+}
+.projects .projects-container .project:hover .project-info-container {
+  opacity: 1;
+}
 
+.contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.contact h3 {
+  margin: 25px 0;
+}
 .contact p {
   font-size: 1.8rem;
   color: #aaa;
+  width: 50%;
 }
 .contact i {
   font-size: 1.8rem;
